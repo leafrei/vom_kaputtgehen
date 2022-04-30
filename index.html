@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="xxxxxxxx">
+	<meta name="keywords" content="xxxxxxx">
+	<meta name="author" content="xxxxxx">
+	
+	<meta name="viewport" content = "height = device-height, user-scalable = yes" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="css/fullscreen.js"></script>
+
+	<title>INDEX:</title>
+	<style type="text/css">
+	#divFullscreen{
+		top: 0px;
+		left: 0px;
+		position: fixed;
+		z-index: 1000;
+		display: show;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	</style>
+</head>
+
+<body>
+<!-- HTML   was hier dazwischen steht ist auskommentiert und wird daher nicht als HTML-Code verarbeitet -->
+<div id="divFullscreen">
+	<a href="javascript:void(0)" onclick="javascript:toggleFullScreen()"><img id="btn_fullscreen" src="images/btn_fullscreen.png" width="64px" height="64px"/></a>
+</div>
+
+<br>
+<br>
+INDEX:<br>
+<br>
+<a href="scroll_1layer.html" target="_blank">scroll_1layer</a><br>
+<br>
+<a href="scroll_2layer.html" target="_blank">scroll_2layer</a><br>
+<br>
+<a href="big_img_button_sound.html" target="_self">big_img_button_sound</a><br>
+<br>
+<img src="images/comic1.png"  width="auto" height="30%"/><br>
+<br>
+<a href="javascript:BTN_1()"><img id="btn_volume" src="images/btn_volume_on.png"  width="auto" height="64px"/></a><br>
+
+<audio id="sound1" loop>
+  <source src="sounds/horn.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// JAVASCRIPT was nach // steht ist auskommentiert /////////////////////////////////////////////////////////
+var sound1 = document.getElementById("sound1"); 
+var onoff_1 = 0;
+function BTN_1() {
+    if (onoff_1==0) {
+	    document.getElementById("btn_volume").src = "images/btn_volume_off.png";
+    	sound1.play(); 
+	    onoff_1=1;
+    } else {
+    	document.getElementById("btn_volume").src = "images/btn_volume_on.png";
+    	sound1.pause(); 
+ 	    onoff_1=0;
+	}
+}
+</script>
+
+</body>
+</html>
